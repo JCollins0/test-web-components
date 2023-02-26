@@ -1,0 +1,23 @@
+<button class="openBtn" (click)="openSearch()" #openSearchButton>
+  Open Search Box
+</button>
+<div id="myOverlay" class="overlay" *ngIf="searchOpen" cdkTrapFocus>
+  <button class="closebtn" (click)="closeSearch()" title="Close Overlay">
+    X
+  </button>
+  <div class="overlay-content">
+    <form (submit)="doSearch()" [formGroup]="fg">
+      <input
+        id="searchin"
+        type="text"
+        placeholder="Search.."
+        name="search"
+        #searchText
+      />
+      <button type="submit">Search</button>
+    </form>
+    <p *ngFor="let item of searchResults">
+      {{ item }}
+    </p>
+  </div>
+</div>

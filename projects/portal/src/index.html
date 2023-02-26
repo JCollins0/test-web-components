@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portal</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <nav id="vdp-navbar" aria-label="Main"></nav>
+    </header>
+    <main>
+      <app-root></app-root>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+  <script>
+    const htmlElement = document.getElementsByTagName("html")[0];
+    const language = htmlElement.lang ?? "en";
+    const topnavScript = document.createElement("script");
+    topnavScript.src = `assets/shared-topnav${
+      language === "en" ? "" : language
+    }.js`;
+    htmlElement.appendChild(topnavScript);
+  </script>
+  <!-- <script src="assets/shared-topnav.js"></script> -->
+</html>

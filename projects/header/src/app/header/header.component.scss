@@ -1,0 +1,42 @@
+:host {
+  display: table;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: table-row;
+    background-color: #036;
+    color: #fff;
+
+    li {
+      display: table-cell;
+      width: 20%;
+      text-align: center;
+      position: relative;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #036;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #036;
+      }
+    }
+    li:hover,
+    li:focus-within {
+      ul {
+        display: block;
+      }
+    }
+  }
+}
