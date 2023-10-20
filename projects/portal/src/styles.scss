@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+#skipNavBtn {
+  position: absolute;
+  left: -9999px;
+}
+
+#skipNavBtn:focus {
+  z-index: 1;
+  display: block;
+  position: relative;
+  left: 0px;
+  height: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+}

@@ -9,13 +9,19 @@
   </head>
   <body>
     <header>
+      <a id="skipNavBtn" href="#mainContent"> Skip to main content </a>
       <nav id="vdp-navbar" aria-label="Main"></nav>
     </header>
-    <main>
+    <main id="mainContent">
       <app-root></app-root>
     </main>
     <footer id="footer"></footer>
   </body>
+  <script>
+    function focusMain() {
+      document.getElementById("main-content")?.focus();
+    }
+  </script>
   <script>
     const htmlElement = document.getElementsByTagName("html")[0];
     const language = htmlElement.lang ?? "en";

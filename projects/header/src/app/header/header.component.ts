@@ -1,8 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { take } from 'rxjs';
-import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   // standalone: true,
